@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,17 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// OR
+Route::view('/', 'welcome');
+
+// Route::get('/users/{name}', function ($name) {
+//     return view('pages.users', ["name" => $name]);
+// });
+// OR
+Route::get('/users/{name}', [UsersController::class, 'name']);
 
 // Route::get('/admin/{id}/{name}', function ($id, $name) {
 //     return "My name is " . $name . " and my id is " . $id;
@@ -37,3 +46,7 @@ Route::get('/', function () {
 // Route::get('/contact', [PostsController::class, 'contact']);
 
 // Route::get('/posts/{id}', [PostsController::class, 'showPosts']);
+
+Route::get('/about/{name}', function ($name) {
+    return view('pages.about', compact('name'));
+});
