@@ -11,7 +11,9 @@
 </body>
 </html> --}}
 
-@extends('layouts.app')
+{{-- @extends function will call layouts.app in this file and plug the @section('XYZ') in the @yield('XYZ') --}}
+
+{{-- @extends('layouts.app')
 
 @section('content')
     Contact Page
@@ -27,8 +29,6 @@
     @endif
 @endsection
 
-{{-- Whatever will be on the @section('content') will be included in app.blade in @yield('content') --}}
-
 @section('footer')
     <script type="text/javascript">alert('Contact Page')</script>
-@endsection
+@endsection --}}

@@ -34,6 +34,6 @@ Route::get('/', function () {
 // OR
 // Route::resource('/posts', PostsController::class); //only show and create method. For create method remove /11 and add /create
 
-Route::get('/contact', [PostsController::class, 'contact']);
+// Route::get('/contact', [PostsController::class, 'contact']);
 
-Route::get('/posts/{id}', [PostsController::class, 'showPosts']);
+// Route::get('/posts/{id}', [PostsController::class, 'showPosts']);

@@ -14,7 +14,7 @@
 </body>
 </html> --}}
 
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
     Show Posts
@@ -22,7 +22,6 @@
     Post number {{$id}}
 @endsection
 
-
 @section('footer')
     <script type="text/javascript">alert('Post Page')</script>
-@endsection
+@endsection --}}
