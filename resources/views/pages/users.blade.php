@@ -1,9 +1,10 @@
 {{-- Pass data into header --}}
 {{-- x-header is used since file name is header.blade.php --}}
-<x-header componentName="{{$name}}"/>
 {{-- componentName variable is defined in Header.php in App folder --}}
 
-<!DOCTYPE html>
+{{-- <x-header componentName="{{$name}}"/> --}}
+
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,4 +15,14 @@
 <body>
     <h1>Hello {{$name}}</h1>
 </body>
-</html>
+</html> --}}
+
+@foreach ($name as $data)
+<h1>{{$data}}</h1>
+@endforeach
+
+<script>
+    var data = @json($name);
+    console.log(data[0]);
+    console.log(data);
+</script>

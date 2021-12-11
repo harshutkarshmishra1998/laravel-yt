@@ -1,4 +1,4 @@
-<?php //dd($id); ?>
+{{-- {{dd($id)}} --}}
 
 {{-- <!DOCTYPE html>
 <html lang="en">

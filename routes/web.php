@@ -25,7 +25,7 @@ Route::view('/', 'welcome');
 //     return view('pages.users', ["name" => $name]);
 // });
 // OR
-Route::get('/users/{name}', [UsersController::class, 'name']);
+// Route::get('/users/{name}', [UsersController::class, 'name']);
 
 // Route::get('/admin/{id}/{name}', function ($id, $name) {
 //     return "My name is " . $name . " and my id is " . $id;
@@ -47,6 +47,8 @@ Route::get('/users/{name}', [UsersController::class, 'name']);
 
 // Route::get('/posts/{id}', [PostsController::class, 'showPosts']);
 
-Route::get('/about/{name}', function ($name) {
-    return view('pages.about', compact('name'));
-});
+// Route::get('/about/{name}', function ($name) {
+//     return view('pages.about', compact('name'));
+// });
+
+Route::get('/users', [UsersController::class, 'loadView']);
