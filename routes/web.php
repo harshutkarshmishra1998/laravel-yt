@@ -16,10 +16,10 @@ use App\Http\Controllers\UsersController;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('pages.welcome');
 // });
 // OR
-Route::view('/', 'welcome');
+Route::view('/', 'pages.welcome');
 
 // Route::get('/users/{name}', function ($name) {
 //     return view('pages.users', ["name" => $name]);
