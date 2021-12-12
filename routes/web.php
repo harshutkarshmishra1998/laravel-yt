@@ -69,3 +69,6 @@ Route::group(['middleware' => ['protectPage']], function () {
 Route::view('/users', 'pages.users')->middleware('protectedPage');
 Route::view('/noaccess', 'pages.noaccess');
 //route middleware */
+
+
+Route::get('/users', [UsersController::class, 'index']);
