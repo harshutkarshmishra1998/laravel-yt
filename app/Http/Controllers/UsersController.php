@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
@@ -23,10 +22,4 @@ class UsersController extends Controller
     // {
     //     return $request->input();
     // }
-
-    function index()
-    {
-        // return "DB connection established";
-        return DB::select("select * from data");
-    }
 }

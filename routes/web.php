@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UsersController;
 
@@ -70,5 +71,7 @@ Route::view('/users', 'pages.users')->middleware('protectedPage');
 Route::view('/noaccess', 'pages.noaccess');
 //route middleware */
 
+// Route::get('/data', [DataController::class, 'index']);
+// get all data from data table using db class
 
-Route::get('/users', [UsersController::class, 'index']);
+Route::get('/data', [DataController::class, 'getData']);
