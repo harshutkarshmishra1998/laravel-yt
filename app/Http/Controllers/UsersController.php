@@ -17,4 +17,9 @@ class UsersController extends Controller
         $name = ['Anil', 'Bruce', 'Sam'];
         return view('pages.users', ['name' => $name]);
     }
+
+    function getData(Request $request)
+    {
+        return $request->input();
+    }
 }

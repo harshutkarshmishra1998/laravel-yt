@@ -41,7 +41,8 @@ Route::view('/', 'pages.welcome');
 // Route::get('/posts/{id}', [PostsController::class, 'show']);
 // Route::get('/posts', [PostsController::class, 'create']);
 // OR
-// Route::resource('/posts', PostsController::class); //only show and create method. For create method remove /11 and add /create
+// Route::resource('/posts', PostsController::class);
+//only show and create method. For create method remove /11 and add /create
 
 // Route::get('/contact', [PostsController::class, 'contact']);
 
@@ -51,4 +52,20 @@ Route::view('/', 'pages.welcome');
 //     return view('pages.about', compact('name'));
 // });
 
-Route::get('/users', [UsersController::class, 'loadView']);
+// Route::get('/users', [UsersController::class, 'loadView']);
+
+// Route::post('/users', [UsersController::class, 'getData']);
+// Route::view('/login', 'pages.users');
+
+/* Route::view('/noaccess', 'pages.noaccess');
+Route::group(['middleware' => ['protectPage']], function () {
+    Route::view('/users', 'pages.users');
+    Route::view('/home', 'pages.home');
+});
+//if /users?age=10 it will redirect to noaccess
+//if /home?age=10 it will redirect to noaccess */
+
+/* Route::view('/home', 'pages.home');
+Route::view('/users', 'pages.users')->middleware('protectedPage');
+Route::view('/noaccess', 'pages.noaccess');
+//route middleware */
